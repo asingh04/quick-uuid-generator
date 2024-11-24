@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "UUID Gen Extension",
+  "description": "Generate and store UUIDs of different versions in your browsers",
+  "version": "0.0.0",
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "public/assets/id.png"
+  }
+}
