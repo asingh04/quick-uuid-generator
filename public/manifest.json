@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "UUID Generator",
+  "description": "Generate and store UUIDs of different versions in your browsers",
+  "version": "1.0.0",
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "assets/id.png"
+  }
+}
