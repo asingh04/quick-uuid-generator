@@ -7,9 +7,12 @@ import {
     RadioChangeEvent,
     Space
 } from "antd";
+import {CopyButton} from './../copyButton/CopyButton';
 import { generateUUID } from "../../logic/uuid";
 import { SUPPORTED_VERSIONS } from "../../constants";
+
 import "./generator.css";
+
 
 const UUID_OPTIONS = [
     {label: "v1", value: SUPPORTED_VERSIONS.v1}, 
@@ -22,8 +25,8 @@ export function Generator() {
     // const uuidInputRef = useRef<InputRef>();
 
     const updateVersion = useCallback((e: RadioChangeEvent) => {
-        debugger;
-        setValue(e.target.value)
+        setValue(e.target.value);
+        e.stopPropagation();
     }, [setValue]);
 
 
@@ -32,22 +35,19 @@ export function Generator() {
 
     }, [setUuidValue, selectedValue]);
 
-    const handleCopyClick = useCallback( async () => {
-        debugger;
-        if (uuidValue) {
-            try {
-                await navigator.clipboard.writeText(uuidValue);
-            } catch (err) {
-                console.error(err);
-            }
-            
+    const handleCopyClick = useCallback(async () => {
+        if (uuidValue){
+            await navigator.clipboard.writeText(uuidValue);
         }
+        
     }, [uuidValue])
+    
 
     return (
         <div className="generator">
-            <Flex vertical gap="middle">
+            <Flex justify="flex-end">
                 <Radio.Group
+                    className="version-checkbox"
                     block
                     optionType="button"
                     buttonStyle="solid"
@@ -57,9 +57,14 @@ export function Generator() {
                 />
             </Flex>
             <Space.Compact className="text-box">
-                <Input disabled placeholder="Click generate" value={uuidValue} />
+                <Input 
+                    disabled 
+                    placeholder="Click generate" 
+                    value={uuidValue}
+                    className="uuid-field"
+                />
                 <Button type="primary" onClick={handleGenerateClick}>Generate</Button>
-                <Button type="primary" onClick={handleCopyClick}>Copy</Button>
+                <CopyButton onClick={handleCopyClick} disable={!uuidValue}/>
             </Space.Compact>
         </div>
     );

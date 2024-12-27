@@ -1,8 +1,17 @@
 div.generator {
-    margin-top: 10px;
+    margin: 10px;
 }
 
 .text-box {
     width: 100%;
     margin: 10px 0px;
+}
+
+.uuid-field {
+    color: #000;
+    font-weight: bold;
+}
+
+.version-checkbox {
+    width: 50%;
 }
