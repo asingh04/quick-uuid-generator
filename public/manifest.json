@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Quick UUID Generator",
-  "description": "Generate random UUIDs of different versions in from your browser window",
+  "description": "Generate random UUIDs of different versions from your browser window",
   "version": "1.0.0",
   "action": {
     "default_popup": "index.html",
