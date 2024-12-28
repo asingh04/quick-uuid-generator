@@ -1,9 +1,14 @@
-# uuid-gen-extension
+# Quick UUID Generator (Chrome Web Extension)
+
+Easily generate UUIDs of versions v1, v4 and v7 quickly from your browser window without much hasle. 
+
+## Tech Stack
+![tech-stack](https://skillicons.dev/icons?i=ts,react,vite,html,css)
 
 
 <!-- Added by vite -->
 
-# React + TypeScript + Vite
+<!-- # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
@@ -51,5 +56,6 @@ export default tseslint.config({
     ...react.configs.recommended.rules,
     ...react.configs['jsx-runtime'].rules,
   },
-})
+}) 
 ```
+--->
