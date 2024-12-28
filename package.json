@@ -5,9 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "npm run cleanup && tsc -b && vite build && npm run zipp",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "cleanup": "rm -rf dist && rm -f quick-uuid-generator.zip",
+    "preview": "vite preview",
+    "zipp": "cd dist && zip -vr ../quick-uuid-generator.zip . -x \\*.DS_Store"
   },
   "dependencies": {
     "@ant-design/icons": "5.5.2",
