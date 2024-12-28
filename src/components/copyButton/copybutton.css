@@ -1,0 +1,7 @@
+.copy-button.copied {
+    background-color: #1a9a1a;
+}
+
+.copy-button.copied:hover {
+    background-color: #1a9a1a !important;
+}

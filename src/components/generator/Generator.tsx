@@ -57,8 +57,7 @@ export function Generator() {
                 />
             </Flex>
             <Space.Compact className="text-box">
-                <Input 
-                    disabled 
+                <Input  
                     placeholder="Click generate" 
                     value={uuidValue}
                     className="uuid-field"
